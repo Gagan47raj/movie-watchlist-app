@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 export const getMovies = () => async (dispatch) => {
   const response = await axios.get('http://localhost:5000/movies');
   dispatch({ type: 'GET_MOVIES', payload: response.data });
