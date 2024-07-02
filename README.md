@@ -1,6 +1,6 @@
 Here's a `README.md` file for your [movie-watchlist-app](https://github.com/Gagan47raj/movie-watchlist-app) with detailed information on the project's functionality, setup, and usage.
 
-```markdown
+
 # Movie Watchlist App
 
 A full-stack application for managing a personal movie watchlist. This project is built using React for the frontend and Node.js for the backend.
