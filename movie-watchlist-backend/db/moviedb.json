@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Forrest Gump",
+    "description": "Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events. All he wants now is to be reunited with his childhood sweetheart, Jenny.",
+    "releaseYear": "1994",
+    "genre": "Comedy/Romance",
+    "id": 4,
+    "watched": true,
+    "rating": 5,
+    "review": "Very Good Movie"
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "description": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+    "releaseYear": "1993",
+    "genre": "Prison dram",
+    "id": 5,
+    "watched": true,
+    "rating": 5,
+    "review": "Very Fabolous movie"
+  },
+  {
+    "title": "Titanic",
+    "description": "Rose, who is being forced to marry a wealthy man, falls in love with Jack, a talented artist, aboard the unsinkable Titanic. Unfortunately, the ship hits an iceberg, endangering their lives.",
+    "releaseYear": "1997",
+    "genre": "Romance/Adventure",
+    "id": 6,
+    "watched": true,
+    "rating": 4,
+    "review": "Nice Movie"
+  },
+  {
+    "title": "The Lion King",
+    "description": "The Lion King is a 2019 American musical drama film that is a photorealistic animated remake of the traditionally-animated 1994 film The Lion King.",
+    "releaseYear": "2019",
+    "genre": "Drama/Action",
+    "id": 7,
+    "watched": true,
+    "rating": 5,
+    "review": "i watched it 5 times "
+  },
+  {
+    "title": "Parasite",
+    "description": "The struggling Kim family sees an opportunity when the son starts working for the wealthy Park family. Soon, all of them find a way to work within the same household and start living a parasitic life.",
+    "releaseYear": "2019",
+    "genre": "Thriller/Comedy",
+    "id": 8,
+    "watched": true,
+    "rating": 5,
+    "review": "give me chills"
+  }
+]
