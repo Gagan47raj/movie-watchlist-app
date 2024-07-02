@@ -1,29 +1,10 @@
 const express = require('express');
 const fs = require('fs-extra');
 const router = express.Router();
-
 const path = require('path');
 
 const filePath = path.join(__dirname, 'db', 'moviedb.json');
 fs.ensureDirSync(path.dirname(filePath));
-
-fs.pathExists(filePath, (err, exists) => {
-  if (err) {
-    console.error('Error checking if moviedb.json exists:', err);
-    process.exit(1);
-  }
-  if (!exists) {
-    fs.writeFile(filePath, JSON.stringify([]), (err) => {
-      if (err) {
-        console.error('Error creating moviedb.json:', err);
-        process.exit(1);
-      }
-      console.log('moviedb.json created successfully');
-    });
-  } else {
-    console.log('moviedb.json already exists');
-  }
-});
 
 const readMovies = async () => {
    try {
