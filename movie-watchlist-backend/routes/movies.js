@@ -1,12 +1,23 @@
 const express = require('express');
 const fs = require('fs-extra');
 const router = express.Router();
-const filePath = './db/moviedb.json';
+const path = require('path');
+
+const filePath = path.join(__dirname, 'db', 'moviedb.json');
 
 
 const readMovies = async () => {
-    const data = await fs.readFile(filePath);
-    return JSON.parse(data);
+   try {
+        const data = await fs.readFile(filePath);
+        return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            await fs.writeFile(filePath, JSON.stringify([]));
+            return [];
+        } else {
+            throw error;
+        }
+    }
 };
 
 const writeMovies = async (movies) => {
