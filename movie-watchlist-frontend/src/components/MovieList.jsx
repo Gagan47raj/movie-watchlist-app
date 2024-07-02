@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getMovies } from "../state/action/movieAction";
 import MovieItem from "./MovieItem";
 import { Link } from "react-router-dom";
-import { FaPlus } from "react-icons/fa";
 
 const MovieList = () => {
   const dispatch = useDispatch();
