@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://movie-watchlist-app-server.vercel.app' || 'http://localhost:5000';
+const API_URL = 'https://movie-watchlist-app-48bd.onrender.com' || 'http://localhost:5000';
 
 export const getMovies = () => async (dispatch) => {
   const response = await axios.get(`${API_URL}/movies`);
