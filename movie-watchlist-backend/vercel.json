@@ -6,13 +6,14 @@
       "use": "@vercel/node"
     }
   ],
-  "includeFiles": [
-    "db/moviedb.json"
-  ],
+  
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/server.js"
     }
+  ],
+  "includeFiles": [
+    "db/moviedb.json"
   ]
 }
