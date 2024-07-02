@@ -13,7 +13,4 @@
       "dest": "/server.js"
     }
   ],
-  "includeFiles": [
-    "db/moviedb.json"
-  ]
 }
