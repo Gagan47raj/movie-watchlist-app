@@ -3,34 +3,34 @@ import axios from 'axios';
 const API_URL = 'https://movie-watchlist-app-server.vercel.app' || 'http://localhost:5000';
 
 export const getMovies = () => async (dispatch) => {
-  const response = await axios.get('http://localhost:5000/movies');
+  const response = await axios.get(`${API_URL}/movies`);
   dispatch({ type: 'GET_MOVIES', payload: response.data });
 };
 
 export const addMovie = (movie) => async (dispatch) => {
-  const response = await axios.post('http://localhost:5000/movies', movie);
+  const response = await axios.post(`${API_URL}/movies`, movie);
   dispatch({ type: 'ADD_MOVIE', payload: response.data });
 };
 
 export const editMovie = (id, updatedMovie) => async (dispatch) => {
-  const response = await axios.put(`http://localhost:5000/movies/${id}`, updatedMovie);
+  const response = await axios.put(`${API_URL}/movies/${id}`, updatedMovie);
   dispatch({ type: 'EDIT_MOVIE', payload: response.data });
 };
 
 export const deleteMovie = (id) => async (dispatch) => {
-  await axios.delete(`http://localhost:5000/movies/${id}`);
+  await axios.delete(`${API_URL}/movies/${id}`);
   dispatch({ type: 'DELETE_MOVIE', payload: id });
 };
 
 export const toggleWatchStatus = (id, watched) => async (dispatch) => {
-  const response = await axios.patch(`http://localhost:5000/movies/${id}/status`, { watched });
+  const response = await axios.patch(`${API_URL}/movies/${id}/status`, { watched });
   dispatch({ type: 'TOGGLE_WATCH_STATUS', payload: response.data });
 };
 
 
 export const updateMovieReview = (id, rating, review) => async (dispatch) => {
   try {
-      const response = await axios.patch(`http://localhost:5000/movies/${id}/review`, { rating, review });
+      const response = await axios.patch(`${API_URL}/movies/${id}/review`, { rating, review });
       dispatch({
           type: 'UPDATE_MOVIE_REVIEW',
           payload: response.data,
