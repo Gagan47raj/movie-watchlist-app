@@ -6,7 +6,14 @@ const moviesRoutes = require('./routes/movies');
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'http://localhost:3000',
+        origin: 'https://movie-watchlist-app-client.vercel.app/',
+        method : ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']
+    }
+));
+
 app.use(bodyParser.json());
 
 app.use('/movies', moviesRoutes);
