@@ -8,8 +8,7 @@ const PORT = 5000;
 
 app.use(cors(
     {
-        origin: 'http://localhost:3000',
-        origin: 'https://movie-watchlist-app-client.vercel.app/',
+        origin: ['http://localhost:3000','https://movie-watchlist-app-client.vercel.app'],
         method : ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']
     }
 ));
