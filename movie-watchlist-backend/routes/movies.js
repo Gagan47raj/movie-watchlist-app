@@ -1,8 +1,9 @@
 const express = require('express');
 const fs = require('fs-extra');
 const router = express.Router();
+const path = require('path');
 
-const filePath = 'db/moviedb.json';
+const filePath = path.join(__dirname, 'db/moviedb.json');
 
 const readMovies = async () => {
    try {
